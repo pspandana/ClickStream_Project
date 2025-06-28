@@ -1,0 +1,4 @@
+google-cloud-pubsub>=2.13.0
+google-cloud-bigquery>=3.9.0
+apache-beam[gcp]>=2.46.0
+faker>=18.9.0

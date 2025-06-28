@@ -1,0 +1,23 @@
+# Python
+__pycache__/
+*.py[cod]
+*$py.class
+my_venv/
+
+# Credentials
+*.json
+!schema.json
+!streaming_schema.json
+
+# Large data files
+*.csv
+
+# Environment variables
+.env
+
+# IDE
+.vscode/
+.idea/
+
+# Logs
+*.log

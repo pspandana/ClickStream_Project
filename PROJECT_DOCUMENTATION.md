@@ -13,9 +13,27 @@
 - Configurable event types and frequencies
 
 ### 2. Data Processing
-- **Batch Pipeline**: Processes historical data
-- **Streaming Pipeline**: Real-time event processing
-- **Error Handling**: Dead-letter table for invalid records
+
+#### Batch Pipeline
+- Processes historical clickstream data from GCS
+- Uses Apache Beam/Dataflow template
+- Handles data transformation and cleaning
+- Supports large-scale historical analysis
+- Output table: `clickstream_analytics.clickstream_batch`
+- Key metrics: daily active users, conversion rates, session analysis
+
+#### Streaming Pipeline
+- Real-time event processing via Pub/Sub
+- Uses Pub/Sub to BigQuery Dataflow template
+- Handles live user interactions
+- Supports real-time analytics and monitoring
+- Output table: `clickstream_analytics.clicks_raw`
+- Key metrics: active users, current sessions, live errors
+
+#### Error Handling
+- Dead-letter table for invalid records
+- Error monitoring and alerting
+- Data quality checks and validation
 
 ### 3. Data Storage
 - **Raw Events**: `clickstream_analytics.clicks_raw`
